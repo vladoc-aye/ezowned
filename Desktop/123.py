@@ -1,22 +1,19 @@
 print('Владик легенда ')
 print('Программа by Vladik ')
-print('Нагрев - a, плавление - b,конденсация - c,кипеник - d, охлождение = e,сгорания - g , отвердивание - h ')
-r = input('Ваша буква:')
+
+print('Нагрев - a, плавление - b,конденсация - c,кипеник - d, охлождение = e,сгорания - g , отвердивание - h, y - ток , Напряжение  t ')
+r = input('Ваша буква: ')
+
 if r == 'a':
     h = float(input('C ='))
     v = int(input('M ='))
     c = int(input('T1 = '))
     y = int(input('T2 ='))
-    print('Дано:')
-    print('C = ',h,' |  q = c * m + (t1 - t2 )')
-    print('M = ',v,' |  q =',h,'*',v,'*''(',c,'-',y,')')
-    print('t1 = ',c,'|')
-    print('t2 = ',y,'|')
-    print('---------')
-    print('Q = ?')
     print('Решение по формуле:''c * m * (T1 - T2)''Решение:''Q =',h,'*',v,'*''(',c,'-',y,')')
     print(h * v * (c - y))
-if r == 'b':
+if r != 'b':
+    pass
+else:
     t = float(input('λ = '))
     q = int(input('M = '))
     print('Дано:')
@@ -73,12 +70,30 @@ if r == 'g':
     print(ba*fa)
 if r == 'h':
     td = float(input('λ = '))
-    qd = int(input('M = '))
+    qd = float(input('M = '))
     nf = td * qd
     print('Дано:')
     print('λ =',td,'|''q = λ * m')
     print('m = ',qd,' |''q = ',td,'*',qd)
-    print('----------''|''q = ',n)
+    print('----------''|''q = ',nf)
     print('q = ?')
     nf = td * qd
     print(nf)
+if r == 'y':
+    rab =  float(input('q ='))
+    fara = int(input('t = '))
+    tara = rab * fara
+    print('Дано')
+    print('q = ',rab)
+    print('t = ',fara)
+    print('Решение по формуле q*t =',tara)
+    print(tara)
+if r == 't':
+    tok = int(input('A = '))
+    to = int(input('q = '))
+    era = tok // to
+    print('Дано')
+    print('A =', tok)
+    print('q = ',to)
+    print('Решение по формуле A/q = ',era)
+    print('Ответ:',era)
